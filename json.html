@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://www.bejson.com/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>在线JSON校验格式化工具（Be JSON）</title>
+<meta name="keywords" content="在线,JSON,JSON 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具">
+<meta name="description" content="在线,JSON,JSON 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具">
+<meta property="qc:admins" content="14002146716252376637571563176">
+ 
+<script src="./json.jquery.min.js.下载"></script>
+<link href="./json.bootstrap.min.css" rel="stylesheet">
+<script src="./json.jquery-linedtextarea.js.下载" type="text/javascript"></script>
+<link href="./json.jquery-linedtextarea.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="./json.inone.js.下载"></script>
+<link rel="stylesheet" href="./json.screen.css" type="text/css" media="screen, projection">
+ 
+<style>.list-group-item a{padding-right:20px}#links a{font-size:13px}#desc1{font-size:13px;}.newFeatureTip{width:13px;height:13px;background-repeat:no-repeat;position:absolute;top:5px;color:red;right:10px;}.newItem{float:left;color:red;position:absolute;margin-top:2px;margin-left:8px;}.announce{color:red;}.nav>{z-index:99999999;}.nav>li:hover .dropdown-menu{display:block;z-index:99999999;}.navbar{margin-bottom:4px;min-height:0px;}.navbar-nav>li>a{padding-top:10px;}#nav_div ul>li>span{color:blue;}#nav_div ul>li{list-style:none;float:left;margin-left:10px;}#nav_div ul{height:20px;}#nav_div ul:hover{background:gainsboro;}nav_div #nav_div ul>li>span{font-family:"微软雅黑";color:blue;width:72px;}#nav_div ul>li>a{color:#666;}#nav_div ul>li>a:hover{color:red;}.xie{-webkit-transform:rotate(-3deg);-moz-transform:rotate(-3deg);-o-transform:rotate(-3deg);}li.hide1{display:block;}*{font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu}</style>
+</head>
+<body>
+<div class="aw-container-wrap">
+<div class="container">
+<div class="row">
+<div class="aw-content-wrap clearfix">
+<div class=" aw-main-content" style="min-height:700px;max-height:2000px">
+
+<script>
+							var showaban = true;
+								var storageKey = "newtools20170322";
+								if(window.localStorage.getItem(storageKey)==null){
+									$("#convertTools").after('<span class="newFeatureTip">●</span>');
+									
+									$("#tosvg").before('<span class="newItem">●</span>');
+									document.getElementById("tosvg").onmouseover = function(){
+										window.localStorage.setItem(storageKey,"has");
+										$(".newFeatureTip").text('');
+									}
+									
+								}
+								
+							</script>
+<div style="clear:both"></div>
+<style>.a2016{color:white;font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;text-align:center;background:red;border-radius:2px;}</style>
+ 
+ 
+ 
+
+<script type="text/javascript">
+			
+	if (typeof JSON === 'undefined') {
+		document.write('<sc' + 'ript type="text/javascript" src="c/js/json2.js"></sc' + 'ript>');
+	}
+</script>
+
+<script>
+function Click(){ 
+window.event.returnValue=false; 
+} 
+//document.oncontextmenu=Click; 
+</script>
+<style>.abdiv{width:284px;height:34px;font-family:华文细黑;color:white;font-size:17px;line-height:40px;margin-left:30%;text-align:center;}</style>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="media">
+<div class="media-body">
+<h4 class="media-heading">BeJson<span id="loca" style="font-size: 13px;"></span></h4>
+  
+</div>
+</div>
+
+</div>
+<div class="panel-body" style="padding-top: 0px;">
+ 
+<p style="margin-top:10px">
+ 
+ 
+
+</p><div style="clear: both;"></div>
+<p></p>
+<form id="JSONValidate" method="post" name="JSONValidate">
+<input type="hidden" id="reformat" value="1">
+<input type="hidden" id="compress" value="0">
+<div>
+<div class="linedwrap"><textarea id="json_input" name="json_input" class="json_input" style="font-size: 11px !important; resize: both; width: 1078px; max-width: 1070px;" rows="32" spellcheck="false" placeholder="请输入需要检验的json字符串或URL"></textarea></div>
+</div>
+</form>
+<div class="validateButtons1 clear">
+<div class="left" style="float:left">
+<div class="btn-group" role="group" aria-label="...">
+<button name="validate" id="validate" value="Validate" class="btn btn-primary">校验</button>
+<button id="copy" data-clipboard-target="json_input" class="btn btn-success">复制</button>
+<input name="validate" class="btn btn-danger" onclick="javascript:json_input.value=&#39;&#39;;$(&#39;#json_input&#39;).focus(); " type="reset" value="清空">
+</div>
+</div>
+<div>
+ 
+<script>
+	
+	$("#validate").click(function(){
+		var jv =$("#json_input").val();
+		 var regex = /^(https?:\/\/)+[^\\s]*/i;  
+         if (jv.match(regex)) { 
+         	jQuery.ajax({
+            type: "get",
+            async: false,
+            url: 'http://2.mshouban.applinzi.com/bejson/fetchJSON.php?u='+encodeURIComponent(jv),
+           // dataType: "json",
+            cache: false,
+            success: function (j) {
+            	$("#json_input").val(j);
+              /* if(j.code!=1){
+         			alert(j.msg);
+         		}else{
+         			$("#json_input").val(j.msg);
+         		}*/
+            },
+            error: function (err) {
+                alert(err);
+            }
+        });
+      
+         }
+	});
+	jQuery(document).keypress(function(e) {
+				if(e.ctrlKey && e.which == 13 || e.which == 10) {
+					//console.log("Ctrl + Enter");
+					$(".btn-primary").click();
+				} 
+			})
+
+	
+	/*$.getJSON("/api/bejson/getLocationJson.php",function(j){
+		if(j.code==0){
+			$("#loca").text("【"+j.message+'】附近的朋友您好a');
+		}
+	});*/
+	var abannt = '<p style="height: 38px;line-height: 38px;background-color: #fff07b;border-bottom: 1px solid #d9cda7;color: #988328;font-size: 13px;" id="aban">建议各位在本站关闭广告屏蔽插件,因为他可能会导致部分功能js无法正常加载,比如【<a style="color: black;" href="http://www.bejson.com/jshtml_format/" target="_blank">JavaScript/HTML格式化</a>】的<a href="http://ww2.sinaimg.cn/large/7fa0b485jw1ew33qr3qtmj20za02l3zk.jpg"  style="color: black;" target="_blank">点击查看被错误屏蔽的截图</a></p>';
+ function stop(){
+return false;
+}
+	setTimeout(function(){
+  if (typeof(window._ssp_global)=="undefined"){
+  
+  		//$("#aban").show();
+  		//$("#desc1").after(abannt)
+  		document.oncontextmenu=stop;
+  		
+  		document.onkeydown=function (e){
+        var currKey=0,evt=e||window.event;
+        currKey=evt.keyCode||evt.which||evt.charCode;
+        if (currKey == 123) {
+            window.event.cancelBubble = true;
+            window.event.returnValue = false;
+        }
+    }
+  	}
+   //alert("广告屏蔽测试");
+  },200);
+   
+
+</script>
+
+
+<script type="text/javascript">
+var clip = new ZeroClipboard( document.getElementById("copy") );
+</script>
+
+<script>
+		$(function(){
+			$("#top_menu a").click(function(){
+			
+				
+				if($(this).attr("href")!='javascript:;'){
+				
+					var history = localStorage.getItem('history');
+					var arr = new Array();
+					arr.push($(this).text()+"-"+$(this).attr("href"))	
+					console.log( localStorage.getItem('history'))
+					//alert(history)
+					if( localStorage.getItem('history')){
+						var history_arr = localStorage.getItem('history').split("|");
+						var nst = $(this).text()+"-"+$(this).attr("href");
+						var len = history_arr.length; 
+						if(len>4){
+							len = 4;	
+						}
+						for(var i=0;i<len;i++){
+							if(history_arr[i]!=nst){
+								arr.push(history_arr[i])
+							}
+						}
+						localStorage.setItem('history',arr.join("|")); 
+					}
+				
+					localStorage.setItem('history',arr.join("|")); 
+				}
+			
+			})
+			var str = '';
+		
+			var history_arr = localStorage.getItem('history').split("|");	
+			for (var i in history_arr) {
+			  var data = history_arr[i].split("-");
+			 // console.log(data)
+			  //var value = localStorage.getItem(key);
+			  str+='<a class="btn btn-success btn-xs" style="margin-left:5px" href="'+data[1]+'">'+ data[0]+'</a>';
+			}
+			if(str){
+				$("#history").parent().show();
+				$("#history").html(str)
+			}
+		
+		
+			
+		
+	})
+		
+	
+		
+	</script>
+</body>
+</html>
