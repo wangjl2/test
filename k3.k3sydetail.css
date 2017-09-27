@@ -1,0 +1,12 @@
+#body{
+	width:900px;
+	height:530px;
+	margin: auto auto;
+}
+.textbox{
+	height:20px;
+	width:150px;
+	margin:0;
+	padding:0 2px;
+	box-sizing:content-box;
+}
