@@ -4,6 +4,10 @@
 	margin: auto auto;
 }
 
+.title{
+	    text-align: center;
+}
+
 .textbox{
 	height:20px;
 	width:120px;
