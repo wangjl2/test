@@ -85,9 +85,9 @@ var $utils= {
 		         { text: '取消编辑', iconCls: 'icon-redo', handler: this.redo}, '-'
 		],
 		data:function (){
-			var num=$("#zjcs").val();//parseInt(prompt("追加次数","5"));//次数
-			var zjje=$("#zjje").val();//parseInt(prompt("中奖金额","10"));//中奖金额
-			var zssy=$("#zssy").val();//parseInt(prompt("最少收益","10"));//最少收益
+			var num=parseInt($("#zjcs").val());//prompt("追加次数","5");//次数
+			var zjje=parseInt($("#zjje").val());//prompt("中奖金额","10");//中奖金额
+			var zssy=parseInt($("#zssy").val());//prompt("最少收益","10");//最少收益
 			num=num?num:10;
 			zjje=zjje?zjje:10;
 			zssy=zssy?zssy:10;
