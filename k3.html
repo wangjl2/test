@@ -15,6 +15,13 @@
 	<div id="body">
 		<table id="box"></table>
 	</div>	
-	
+	<div id="tb" style="padding:5px;">
+		<div style="padding:0 0 0 7px;color:#333;">
+			追加次数：<input type="text" class="textbox" id="zjcs" value="10" onclick="$(this).select();">
+			中奖金额：<input type="text" class="textbox" id="zjje" value="10" onclick="$(this).select();">
+			最少收益：<input type="text" class="textbox" id="zssy" value="10" onclick="$(this).select();">
+			<a href="#" class="easyui-linkbutton qy" onclick="$('#box').datagrid({data:$utils.data()});">查 	询</a>
+		</div>
+	</div>
 </body>
 </html>
