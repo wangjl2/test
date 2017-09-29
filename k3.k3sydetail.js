@@ -13,7 +13,7 @@ $(function () {
 		 nowap: true, //列内容多时自动折至第二行
 		 idField: 'ID', //主键
 		 columns : $utils.columns,
-//		 toolbar: $utils.toolbar,
+		 toolbar: "#tb",
 		 onDblClickRow : function (rowIndex, rowData) {
 			location.reload();
 //			$utils.onDblClickRow(rowIndex, rowData);
@@ -85,9 +85,12 @@ var $utils= {
 		         { text: '取消编辑', iconCls: 'icon-redo', handler: this.redo}, '-'
 		],
 		data:function (){
-			var num=parseInt(prompt("追加次数","5"));//次数
-			var zjje=parseInt(prompt("中奖金额","10"));//中奖金额
-			var zssy=parseInt(prompt("最少收益","10"));//最少收益
+			var num=$("#zjcs").val();//parseInt(prompt("追加次数","5"));//次数
+			var zjje=$("#zjje").val();//parseInt(prompt("中奖金额","10"));//中奖金额
+			var zssy=$("#zssy").val();//parseInt(prompt("最少收益","10"));//最少收益
+			num=num?num:10;
+			zjje=zjje?zjje:10;
+			zssy=zssy?zssy:10;
 			var data=[];
 			for(var i=0;i<num;i++){
 				var scData=i>0?data[i-1]:{};//上次数据
