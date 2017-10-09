@@ -14,10 +14,10 @@ $(function () {
 		 idField: 'ID', //主键
 		 columns : $utils.columns,
 		 toolbar: "#tb",
-		 onDblClickRow : function (rowIndex, rowData) {
-			location.reload();
+// 		 onDblClickRow : function (rowIndex, rowData) {
+// 			location.reload();
 //			$utils.onDblClickRow(rowIndex, rowData);
-		 },
+// 		 },
 		 onAfterEdit : function (rowIndex, rowData, changes) {
 //			$utils.onAfterEdit(rowIndex, rowData, changes);
 		 },
