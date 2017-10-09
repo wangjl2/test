@@ -19,10 +19,11 @@
 	
 	<div id="tb" style="padding:5px;">
 		<div style="padding:0 0 0 7px;color:#333;">
-			追加次数：<input type="text" class="textbox" id="zjcs" value="10" onfocus="$(this).select();">
-			中奖金额：<input type="text" class="textbox" id="zjje" value="10" onfocus="$(this).select();">
-			最少收益：<input type="text" class="textbox" id="zssy" value="10" onfocus="$(this).select();">
-			<a href="#" class="easyui-linkbutton qy" onclick="$('#box').datagrid({data:$utils.data()});">查 	询</a>
+			追加次数：<input type="text" class="textbox" id="zjcs" value="10" onfocus="$(this).select();" onchange="$('#box').datagrid({data:$utils.data()});">
+			中奖金额：<input type="text" class="textbox" id="zjje" value="10" onfocus="$(this).select();" onchange="$('#box').datagrid({data:$utils.data()});">
+			最少收益：<input type="text" class="textbox" id="zssy" value="10" onfocus="$(this).select();" onchange="$('#box').datagrid({data:$utils.data()});">
+			<a href="#" class="easyui-linkbutton qy" onclick="$('#box').datagrid({data:$utils.data()});">查  询</a>
+			<a href="#" class="easyui-linkbutton qy" onclick="location.reload();">重  置</a>
 		</div>
 	</div>
 </body>
