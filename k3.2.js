@@ -86,7 +86,7 @@ var $utils= {
 		data:function (){
       var num=parseInt($("#zjcs").val());//prompt("追加次数","5");//次数
       var zjje=parseInt($("#zjje").val());//prompt("中奖金额","10");//中奖金额
-      var zssy=parseInt($("#zssy").val());//prompt("最少收益","10");//最少收益
+      var zssy=parseInt($("#zssy").val());//prompt("指数","10");//指数
       num=num?num:10;
       zjje=zjje?zjje:10;
       zssy=zssy?zssy:10;
@@ -97,7 +97,7 @@ var $utils= {
         var zcb=0;//总成本=上次总成本+本次总成本
         var zsy=0;//总收益=本次成本*中奖倍数
         var bcsy=0;//本次收益=总收益-总成本
-        var zjbs=(scData.ZJBS?scData.ZJBS:1)*2;//倍数
+        var zjbs=(scData.ZJBS?scData.ZJBS:1)*zssy;//倍数
         bccb+=2*zjbs;
         zcb=(scData.ZCB?scData.ZCB:0)+bccb;//总成本=上次总成本+本次总成本
         zsy=zjbs*zjje;//本次收益=本次成本*中奖倍数
