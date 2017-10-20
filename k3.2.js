@@ -98,6 +98,7 @@ var $utils= {
         var zsy=0;//总收益=本次成本*中奖倍数
         var bcsy=0;//本次收益=总收益-总成本
         var zjbs=(scData.zjbs?scData.zjbs:1)*2;//倍数
+	      alert(zjbs);
         bccb+=2*zjbs;
         zcb=(scData.ZCB?scData.ZCB:0)+bccb;//总成本=上次总成本+本次总成本
         zsy=zjbs*zjje;//本次收益=本次成本*中奖倍数
