@@ -98,7 +98,7 @@ var $utils= {
 				var zcb=0;//总成本=上次总成本+本次总成本
 				var zsy=0;//总收益=本次成本*中奖倍数
 				var bcsy=0;//本次收益=总收益-总成本
-				var j=0;//最少两倍
+				var j=0;//倍数
 				for(;true;j++){
 //					alert(zsy+"--"+zcb+"--"+zssy);
 					if(zsy>zcb+zssy || j>2000){
