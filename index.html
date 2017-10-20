@@ -26,9 +26,24 @@
 			background: #F6AB00;
 		} 
 		.linkbutton2{
-			background: transparent;
-			border-width: 0;
-			filter: none;
+			position: absolute;
+			  top: 0;
+			  padding: 0;
+			  vertical-align: top;
+			  -moz-border-radius: 0 0 0 0;
+			  -webkit-border-radius: 0 0 0 0;
+			  border-radius: 0 0 0 0;
+		}
+		.linkbutton3{
+			font-size: 12px;
+			  font-weight: bold;
+			  text-decoration: none;
+			  opacity: 0.6;
+			  filter: alpha(opacity=60);
+		}
+		linkbutton3:hover{
+		  opacity: 1.0;
+		  filter: alpha(opacity=100);
 		}
 	</style>
  <body>
@@ -37,5 +52,7 @@
 	<a target="2" class="linkbutton" href="exel-json.html">在线Exel、CSV转JSON格式</a>
 	<a target="2" class="linkbutton" href="k3.html">快3追号信息</a>
 	<a target="2" class="easyui-linkbutton" href="https://www.baidu.com/">百度</a>
+	<a target="2" class="linkbutton2" href="https://www.baidu.com/">百度</a>
+	<a target="2" class="linkbutton3" href="https://www.baidu.com/">百度</a>
   	
 </html>
