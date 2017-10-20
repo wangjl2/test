@@ -100,7 +100,7 @@ var $utils= {
         var zjbs=i*2;//倍数
         bccb+=2*zjbs;
         zcb=(scData.ZCB?scData.ZCB:0)+bccb;//总成本=上次总成本+本次总成本
-        zsy=bccb*zjje/2;//本次收益=本次成本*中奖倍数
+        zsy=zjbs*zjje;//本次收益=本次成本*中奖倍数
         bcsy=zsy-zcb;//纯收益=本次收益-总成本
         data[i]={
           "NO":i+1,
