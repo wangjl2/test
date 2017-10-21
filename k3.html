@@ -26,7 +26,8 @@
 			<a href="#" class="easyui-linkbutton qy" onclick="location.reload();">重  置</a>
 		</div>
 	</div>
-	<a target="b" href="https://github.com/wangjlx/test/edit/master/k3.html">
+	文件名：<input type="text" class="textbox" id="wj" value="k3.html" onfocus="$(this).select();" onchange="window.open('https://github.com/wangjlx/test/edit/master/'+$(this).val(), '文件');">
+	 <a target="b" class="button easyui-linkbutton" onclick="window.open('https://github.com/wangjlx/test/edit/master/'+$('#wj').val(), '文件');">
 	 <span class="text">更新页面代码</span>
 	</a><br><br>
 </body>
